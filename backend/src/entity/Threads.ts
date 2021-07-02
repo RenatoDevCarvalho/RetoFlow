@@ -17,7 +17,7 @@ export class Threads {
   @Column()
   description: string;
 
-  @Column()
+  @Column({default: 0})
   answers: number;
 
 }

@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express";
 
-import { getThreads } from './controller/THreadsController';
+import { getThreads, saveThread } from './controller/THreadsController';
 
 const routes = Router();
 
@@ -9,5 +9,6 @@ routes.get("/", (req: Request, res: Response) => {
 });
 
 routes.get("/threads", getThreads);
+routes.post("/threads", saveThread);
 
 export default routes;
