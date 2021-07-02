@@ -6,7 +6,7 @@
 
 .thread_container {
   margin: 10px 5px;
-  padding: 5px;
+  padding: 0 5px;
   background: #fff;
   border: 1px solid #bcbcbc;
   border-radius: 5px;
@@ -39,8 +39,8 @@
   }
   
   .thread_footer {
-    margin-top: 5px;
+    height: 30px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
   }
 }
