@@ -7,5 +7,10 @@
   padding: 0 10px;
   background: #000;
   color: #FFF;
-  font: 400 20px 'Roboto', sans-serif;
+  font: 500 20px 'Roboto', sans-serif;
+
+  :hover {
+    cursor: pointer;
+    color: #ccc;
+  }
 }
