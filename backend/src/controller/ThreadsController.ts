@@ -11,4 +11,4 @@ export const getThreads = async (req: Request, res: Response) => {
 export const saveThread = async (req: Request, res: Response) => {
   const thread = await getRepository(Threads).save(req.body);
   res.json(thread);
-}
+};
