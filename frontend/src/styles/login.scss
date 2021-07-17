@@ -46,4 +46,20 @@
       background: #bbb;
     }
   }
+
+  .message {
+    font-size: 14px;
+    color: #4499ff;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: #3388ff;
+    }
+  }
+
+  .error {
+    font-size: 14px;
+    color: #ff0000;
+  }
 }

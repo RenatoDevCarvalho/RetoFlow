@@ -5,14 +5,18 @@ import { Login } from './pages/Login';
 
 import { Header } from './components/Header';
 
+import { AuthContextProvider } from './contexts/AuthContext';
+
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/login" exact component={Login} />
-      </Switch>
+      <AuthContextProvider>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/login" exact component={Login} />
+        </Switch>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 }
