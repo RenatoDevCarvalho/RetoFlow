@@ -22,6 +22,9 @@ export const authenticate = async (req: Request, res: Response) => {
 
   const token = jwt.sign({ id: user.id }, 'secret');
 
+  delete user.email;
+  delete user.password;
+  
   return res.json({
     user,
     token

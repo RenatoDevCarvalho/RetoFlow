@@ -9,7 +9,7 @@ export const saveUser = async (req: Request, res: Response) => {
   const userExists = await repo.findOne({ where: { email } });
 
   if (userExists) {
-    return res.status(409).send("Email já cadastrado");
+    return res.sendStatus(409);
   }
 
   const user = repo.create(req.body);
