@@ -12,6 +12,7 @@ type AuthContextData = {
   signed: boolean;
   user: User | null;
   Login(loginInfo: ILoginInfo): Promise<void>;
+  Logout(): void;
 }
 
 type AuthContextProviderProps = {
@@ -48,8 +49,15 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
    localStorage.setItem('@App:token', response.data.token);
   }
 
+  async function Logout() {
+    setUser(null);
+
+    localStorage.removeItem('@App:user');
+    localStorage.removeItem('@App:token');
+  }
+
   return (
-    <AuthContext.Provider value={{ signed: !!user, user, Login }}>
+    <AuthContext.Provider value={{ signed: !!user, user, Login, Logout }}>
       {props.children}
     </AuthContext.Provider>
   );
