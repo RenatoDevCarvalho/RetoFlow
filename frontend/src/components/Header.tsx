@@ -31,10 +31,14 @@ export function Header() {
     handleClose();
   }
 
+  function handleHome() {
+    history.push('/');
+  }
+
   return (
     location.pathname !== '/login' ?
       <div className="main">
-        <span className="logo">RetoOverflow</span>
+        <span className="logo" onClick={handleHome}>RetoOverflow</span>
         {signed ?
           <>
             <span

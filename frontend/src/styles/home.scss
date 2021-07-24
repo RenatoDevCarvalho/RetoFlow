@@ -4,6 +4,17 @@
   font: 400 16px 'Roboto', sans-serif;
 }
 
+.question {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+
+  button {
+    height: 30px;
+    padding: 0 10px;
+  }
+}
+
 .thread_container {
   margin: 10px 5px;
   padding: 0 5px;
