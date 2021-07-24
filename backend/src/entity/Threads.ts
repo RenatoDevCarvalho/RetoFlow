@@ -1,12 +1,10 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne } from "typeorm";
+import { User } from './User';
 
 @Entity()
 export class Threads {
   @PrimaryGeneratedColumn()
   id: number;
-
-  @Column()
-  author: string;
 
   @CreateDateColumn()
   created_at: Date;
@@ -20,4 +18,6 @@ export class Threads {
   @Column({default: 0})
   answers: number;
 
+  @ManyToOne(() => User, user => user.threads, { eager: true })
+  user: User
 }

@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert, BeforeUpdate } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert, BeforeUpdate, OneToMany } from 'typeorm';
+import { Threads } from './Threads';
 import bcrypt from 'bcryptjs';
 
 @Entity()
@@ -20,4 +21,7 @@ export class User {
   hashPassword() {
     this.password = bcrypt.hashSync(this.password, 8);
   }
+
+  @OneToMany(() => Threads, threads => threads.user)
+  threads: Threads[];
 }

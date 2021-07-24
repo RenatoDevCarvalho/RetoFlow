@@ -5,6 +5,11 @@ import { Request, Response } from 'express';
 export const getThreads = async (req: Request, res: Response) => {
   const threads = await getRepository(Threads).find();
 
+  threads.map(item => {
+    delete item.user.email
+    delete item.user.password
+  })
+
   return res.json(threads);
 };
 
