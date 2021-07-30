@@ -29,7 +29,6 @@ export function Home() {
 
   useEffect(() => {
     loadThreads();
-    console.log(threads);
   }, [])
 
   async function loadThreads() {
@@ -58,7 +57,7 @@ export function Home() {
         </button>
       </div>
       {threads.map(item => (
-        <div className="thread_container">
+        <div className="thread_container" key={item.id}>
           <div className="thread_header">
             <span className="user">{item.user.username}</span>
             <span className="date">{formatDate(item.created_at)}</span>

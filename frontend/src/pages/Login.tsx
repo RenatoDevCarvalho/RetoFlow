@@ -30,7 +30,7 @@ export function Login() {
 
     if (isRegister) {
       try {
-        const response = await api.post('/user', user);
+        await api.post('/user', user);
         Login(user);
         history.goBack();
       }

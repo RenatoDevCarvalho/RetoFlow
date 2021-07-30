@@ -1,0 +1,33 @@
+.new_thread_container {
+  width: 768px;
+  margin: 10px auto;
+  padding: 5px;
+  font: 400 16px 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #bcbcbc;
+  border-radius: 5px; 
+
+  span {
+    margin: 10px 0 0;
+    font-size: 18px;
+  }
+
+  .new_thread_title {
+    height: 30px;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .new_thread_description {
+    height: 400px;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  button {
+    width: 300px;
+    margin: 20px auto;
+  }
+}

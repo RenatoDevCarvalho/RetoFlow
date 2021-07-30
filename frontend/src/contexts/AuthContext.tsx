@@ -3,7 +3,7 @@ import { createContext, useEffect, useState, ReactNode } from "react";
 import api from '../services/api';
 
 type User = {
-  id: string;
+  id: number;
   username: string;
   token: string;
 }
